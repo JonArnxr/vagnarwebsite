@@ -44,7 +44,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
   }
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-stone-900">
       {/* Back Button */}
       <div className="bg-stone-800 border-b border-stone-700">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -85,7 +85,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
 
           {/* Description */}
           <div className="max-w-3xl mb-10">
-            <p className="text-lg text-stone-700 leading-relaxed">
+            <p className="text-lg text-stone-300 leading-relaxed">
               {post.caption}
             </p>
           </div>
@@ -94,14 +94,14 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
           <ShareButtons />
 
           {/* Contact CTA */}
-          <div className="mt-16 bg-stone-900 text-white p-10">
+          <div className="mt-16 bg-stone-800 text-white p-10 rounded-2xl border border-stone-700/50">
             <h3 className="text-2xl font-bold mb-4">Áhugi á vörum okkar?</h3>
             <p className="text-stone-400 mb-6">
               Hafðu samband við okkur fyrir frekari upplýsingar og verðtilboð.
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 font-semibold hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center bg-blue-600 text-white px-8 py-4 font-semibold hover:bg-blue-500 rounded-xl hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-300"
             >
               Hafa Samband
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
