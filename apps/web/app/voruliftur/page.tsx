@@ -36,7 +36,7 @@ export default function VorulifturPage() {
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Vörulyftur frá<br />
-              <span className="gradient-text">Dhollandia</span>
+              Dhollandia
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Við erum viðurkenndur Dhollandia dreifingaraðili á Íslandi og bjóðum upp á
@@ -93,84 +93,105 @@ export default function VorulifturPage() {
         </div>
       </section>
 
-      {/* Lift Types */}
-      <section className="py-16 bg-stone-900/50">
+      {/* Lift Types — Alternating large cards */}
+      <section className="py-24 bg-stone-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block text-blue-600 text-sm font-semibold tracking-widest uppercase mb-4">Úrval</span>
-            <h2 className="text-3xl font-bold text-white mb-4">Tegundir vörulyfta</h2>
-            <p className="text-stone-400 max-w-2xl mx-auto">
+          <div className="mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight">Tegundir vörulyfta</h2>
+            <p className="text-stone-400 mt-4 text-lg max-w-2xl">
               Við bjóðum upp á allar tegundir Dhollandia vörulyfta og aðstoðum þig við að
-              velja réttu lyftuna fyrir þínar þarfir.
+              velja réttu lyftuna.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 stagger-children">
-            {liftTypes.map((lift) => (
-              <div key={lift.name} className="bg-stone-800 rounded-2xl p-8 card-hover border border-stone-700/50">
-                <h3 className="text-xl font-bold text-white mb-3">{lift.name}</h3>
-                <p className="text-stone-400 mb-4">{lift.description}</p>
-                <ul className="space-y-2">
-                  {lift.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-stone-300 text-sm">
-                      <svg className="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* First card — spans 2 cols */}
+            <div className="md:col-span-2 bg-gradient-to-br from-blue-600/20 to-blue-900/10 rounded-3xl p-10 border border-white/5 min-h-[200px] flex flex-col justify-between">
+              <div>
+                <span className="text-blue-400 text-sm font-medium uppercase tracking-widest">{liftTypes[0].name}</span>
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mt-3">{liftTypes[0].description}</h3>
               </div>
-            ))}
+              <div className="flex flex-wrap gap-3 mt-6">
+                {liftTypes[0].features.map((f) => (
+                  <span key={f} className="bg-white/10 text-white text-sm px-4 py-2 rounded-full">{f}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Second card */}
+            <div className="bg-stone-800/80 rounded-3xl p-8 border border-white/5 min-h-[200px] flex flex-col justify-between">
+              <span className="text-stone-500 text-sm font-medium uppercase tracking-widest">{liftTypes[1].name}</span>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3">{liftTypes[1].description}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {liftTypes[1].features.map((f) => (
+                    <span key={f} className="text-stone-400 text-sm">{f} ·</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Third card */}
+            <div className="bg-stone-800/80 rounded-3xl p-8 border border-white/5 min-h-[180px] flex flex-col justify-between">
+              <span className="text-stone-500 text-sm font-medium uppercase tracking-widest">{liftTypes[2].name}</span>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-3">{liftTypes[2].description}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {liftTypes[2].features.map((f) => (
+                    <span key={f} className="text-stone-400 text-sm">{f} ·</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Fourth card — spans 2 cols */}
+            <div className="md:col-span-2 bg-stone-800/80 rounded-3xl p-10 border border-white/5 min-h-[180px] flex flex-col justify-between">
+              <span className="text-stone-500 text-sm font-medium uppercase tracking-widest">{liftTypes[3].name}</span>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-3">{liftTypes[3].description}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {liftTypes[3].features.map((f) => (
+                    <span key={f} className="bg-white/10 text-white text-sm px-4 py-2 rounded-full">{f}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-16 bg-stone-900">
+      {/* Services — Three pillars */}
+      <section className="py-24 bg-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block text-blue-600 text-sm font-semibold tracking-widest uppercase mb-4">Þjónusta</span>
-            <h2 className="text-3xl font-bold text-white mb-4">Þjónusta okkar</h2>
-            <p className="text-stone-400 max-w-2xl mx-auto">
-              Við bjóðum upp á heildstæða þjónustu fyrir vörulyftur
-            </p>
-          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight mb-16">Þjónusta okkar</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
-            <div className="bg-stone-800 rounded-2xl p-8 text-center card-hover border border-stone-700/50">
-              <div className="w-16 h-16 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-gradient-to-b from-stone-800/80 to-stone-900 rounded-3xl p-10 border border-white/5 min-h-[200px] flex flex-col justify-between group hover:border-blue-500/20 transition-colors">
+              <span className="text-6xl font-bold text-white/10 group-hover:text-blue-400/20 transition-colors">01</span>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-3">Sala</h3>
+                <p className="text-stone-400 leading-relaxed">
+                  Söluráðgjöf og tilboð á allar tegundir Dhollandia vörulyfta
+                </p>
               </div>
-              <h3 className="font-bold text-white mb-2">Sala</h3>
-              <p className="text-stone-400 text-sm">
-                Söluráðgjöf og tilboð á allar tegundir Dhollandia vörulyfta
-              </p>
             </div>
-            <div className="bg-stone-800 rounded-2xl p-8 text-center card-hover border border-stone-700/50">
-              <div className="w-16 h-16 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            <div className="bg-gradient-to-b from-stone-800/80 to-stone-900 rounded-3xl p-10 border border-white/5 min-h-[200px] flex flex-col justify-between group hover:border-blue-500/20 transition-colors">
+              <span className="text-6xl font-bold text-white/10 group-hover:text-blue-400/20 transition-colors">02</span>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-3">Uppsetning</h3>
+                <p className="text-stone-400 leading-relaxed">
+                  Fagleg uppsetning á öllum tegundum vörulyfta á flutningabíla
+                </p>
               </div>
-              <h3 className="font-bold text-white mb-2">Uppsetning</h3>
-              <p className="text-stone-400 text-sm">
-                Fagleg uppsetning á öllum tegundum vörulyfta á flutningabíla
-              </p>
             </div>
-            <div className="bg-stone-800 rounded-2xl p-8 text-center card-hover border border-stone-700/50">
-              <div className="w-16 h-16 bg-blue-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                </svg>
+            <div className="bg-gradient-to-b from-stone-800/80 to-stone-900 rounded-3xl p-10 border border-white/5 min-h-[200px] flex flex-col justify-between group hover:border-blue-500/20 transition-colors">
+              <span className="text-6xl font-bold text-white/10 group-hover:text-blue-400/20 transition-colors">03</span>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-3">Viðhald og viðgerðir</h3>
+                <p className="text-stone-400 leading-relaxed">
+                  Reglulegt viðhald og viðgerðir á öllum tegundum vörulyfta
+                </p>
               </div>
-              <h3 className="font-bold text-white mb-2">Viðhald og viðgerðir</h3>
-              <p className="text-stone-400 text-sm">
-                Reglulegt viðhald og viðgerðir á öllum tegundum vörulyfta
-              </p>
             </div>
           </div>
         </div>

@@ -20,7 +20,7 @@ export default async function FeedPage() {
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Fréttir og<br />
-              <span className="gradient-text">verkefni</span>
+              verkefni
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Fylgstu með nýjustu fréttum og verkefnum frá Vögnum & Þjónustu.

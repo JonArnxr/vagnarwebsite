@@ -92,7 +92,7 @@ export default function KerrurPage() {
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Kerrur fyrir<br />
-              <span className="gradient-text">íslenskar aðstæður</span>
+              íslenskar aðstæður
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Kerrur frá Vögnum & Þjónustu eru hannaðar með velferð hestsins og öryggi í forgrunni,
@@ -102,64 +102,58 @@ export default function KerrurPage() {
         </div>
       </section>
 
-      {/* Info Section */}
-      <section className="py-16 bg-stone-900">
+      {/* Features — Bento Grid */}
+      <section className="py-24 bg-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Gæði og ending</h2>
-              <div className="text-stone-400 space-y-4 leading-relaxed">
-                <p>
-                  Kerrurnar eru byggðar á heitgalvaniseraðri grind og yfirbyggðar með sterku
-                  trefjasamlokuefni sem þolir íslenskar aðstæður og mikla notkun til langs tíma.
-                </p>
-                <p>
-                  Mikil áhersla er lögð á þægindi og hagkvæmni í notkun, með vel útbúinni
-                  hnakkageymslu, anti-slip gólfi og vönduðum innréttingum sem tryggja öruggan flutning.
-                </p>
-                <p>
-                  Ryðfríar lamir og læsingar, LED ljós og gæðabúnaður frá viðurkenndum framleiðendum
-                  tryggja áreiðanleika í hverri ferð.
-                </p>
+          <div className="mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight">Gæði og ending</h2>
+            <p className="text-stone-400 mt-4 text-lg max-w-2xl">
+              Kerrurnar eru byggðar á heitgalvaniseraðri grind og yfirbyggðar með sterku
+              trefjasamlokuefni sem þolir íslenskar aðstæður.
+            </p>
+          </div>
+
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Large feature card */}
+            <div className="md:col-span-2 bg-gradient-to-br from-blue-600/20 to-blue-900/10 rounded-3xl p-10 flex flex-col justify-between min-h-[200px] border border-white/5">
+              <div>
+                <span className="text-blue-400 text-sm font-medium uppercase tracking-widest">Öryggi</span>
+                <h3 className="text-3xl font-bold text-white mt-3">Heitgalvaniseruð grind og öruggir festingar</h3>
+              </div>
+              <p className="text-stone-300 text-lg mt-6 max-w-lg">
+                Ryðfríar lamir og læsingar, LED ljós og gæðabúnaður frá viðurkenndum framleiðendum
+                tryggja áreiðanleika í hverri ferð.
+              </p>
+            </div>
+
+            {/* Tall card */}
+            <div className="bg-stone-800/80 rounded-3xl p-8 flex flex-col justify-between min-h-[200px] border border-white/5">
+              <span className="text-5xl font-bold text-white">30+</span>
+              <div>
+                <h3 className="text-xl font-bold text-white">Ára reynsla</h3>
+                <p className="text-stone-400 mt-2">Áratuga þekking á smíði og viðhaldi kerru á Íslandi</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 stagger-children">
-              <div className="bg-stone-800 rounded-2xl p-6 card-hover border border-stone-700/50">
-                <div className="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="font-bold text-white mb-2">Öryggi</h3>
-                <p className="text-stone-400 text-sm">Heitgalvaniseruð grind og öruggir festingar</p>
-              </div>
-              <div className="bg-stone-800 rounded-2xl p-6 card-hover border border-stone-700/50">
-                <div className="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="font-bold text-white mb-2">Ending</h3>
-                <p className="text-stone-400 text-sm">Trefjasamlokuefni sem þolir mikið</p>
-              </div>
-              <div className="bg-stone-800 rounded-2xl p-6 card-hover border border-stone-700/50">
-                <div className="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-bold text-white mb-2">Þægindi</h3>
-                <p className="text-stone-400 text-sm">Anti-slip gólfefni og góð loftræsting</p>
-              </div>
-              <div className="bg-stone-800 rounded-2xl p-6 card-hover border border-stone-700/50">
-                <div className="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                  </svg>
-                </div>
-                <h3 className="font-bold text-white mb-2">Sérútfærslur</h3>
-                <p className="text-stone-400 text-sm">Aðlöguð að þínum þörfum</p>
-              </div>
+
+            {/* Bottom row — two cards */}
+            <div className="bg-stone-800/80 rounded-3xl p-8 border border-white/5">
+              <h3 className="text-xl font-bold text-white mb-3">Ending</h3>
+              <p className="text-stone-400 leading-relaxed">
+                Trefjasamlokuefni sem þolir mikið álag og mikla notkun til langs tíma.
+              </p>
+            </div>
+            <div className="bg-stone-800/80 rounded-3xl p-8 border border-white/5">
+              <h3 className="text-xl font-bold text-white mb-3">Þægindi</h3>
+              <p className="text-stone-400 leading-relaxed">
+                Anti-slip gólfefni, góð loftræsting og vel útbúin hnakkageymsla.
+              </p>
+            </div>
+            <div className="bg-stone-800/80 rounded-3xl p-8 border border-white/5">
+              <h3 className="text-xl font-bold text-white mb-3">Sérútfærslur</h3>
+              <p className="text-stone-400 leading-relaxed">
+                Allar kerrur aðlagaðar að þínum þörfum og óskum.
+              </p>
             </div>
           </div>
         </div>
@@ -169,7 +163,7 @@ export default function KerrurPage() {
       <section className="py-16 bg-stone-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="inline-block text-blue-600 text-sm font-semibold tracking-widest uppercase mb-4">Stillingar</span>
+            <span className="inline-block text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">Stillingar</span>
             <h2 className="text-3xl font-bold text-white mb-4">Stilltu þína kerru</h2>
             <p className="text-stone-400 max-w-2xl mx-auto">
               Veldu stærð, lit og aukabúnað til að fá verðmat. Endanlegt verð getur verið breytilegt.
@@ -265,7 +259,7 @@ export default function KerrurPage() {
                   {wheelOptions.map((wheel) => (
                     <button
                       key={wheel.id}
-                      onClick={() => setSelectedWheels(wheel)}
+                      onClick={() => setSelectedWheels(selectedWheels?.id === wheel.id ? null : wheel)}
                       className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 ${
                         selectedWheels?.id === wheel.id
                           ? "bg-blue-600 text-white shadow-md shadow-blue-600/20"

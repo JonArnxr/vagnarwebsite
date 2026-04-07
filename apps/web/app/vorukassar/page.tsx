@@ -4,39 +4,18 @@ const features = [
   {
     title: "Kæling og frysting",
     description: "Möguleiki á kæli- og frystikerfum fyrir viðkvæmar vörur",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-      </svg>
-    ),
   },
   {
     title: "Hliðaropnun",
     description: "Fjölbreyttir möguleikar á hliðaropnun fyrir auðvelda fermingu",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-      </svg>
-    ),
   },
   {
     title: "Vörulyftur",
     description: "Uppsett með Dhollandia vörulyftum fyrir skilvirka affermingu",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-      </svg>
-    ),
   },
   {
     title: "Sérsmíðað",
     description: "Allar lausnir aðlagaðar að þínum þörfum og þínum bíl",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
   },
 ];
 
@@ -53,7 +32,7 @@ export default function VorukassarPage() {
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Sérsmíðaðir vörukassar<br />
-              <span className="gradient-text">fyrir flutningabíla</span>
+              fyrir flutningabíla
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Vörukassar frá Vögnum & Þjónustu eru hannaðir með íslenskar aðstæður í huga
@@ -63,44 +42,43 @@ export default function VorukassarPage() {
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 bg-stone-900">
+      {/* Features — Full width horizontal scroll feel */}
+      <section className="py-24 bg-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-6">Framleiðum eftir þínum þörfum</h2>
-              <div className="text-stone-400 space-y-4 leading-relaxed">
-                <p>
-                  Við framleiðum sérsmíðaðar lausnir fyrir flutningabíla og sendibíla,
-                  með möguleika á kælingu, frystingu, hliðaropnun og vörulyftum eftir þínum þörfum.
-                </p>
-                <p>
-                  Hvort sem um er að ræða daglega dreifingu eða sérhæfða flutninga tryggja
-                  vörukassarnir okkar öruggan og skilvirkan flutning - byggðir á áratuga reynslu
-                  og stöðugri þróun.
-                </p>
-              </div>
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight">Framleiðum eftir þínum þörfum</h2>
+            <p className="text-stone-400 mt-4 text-lg">
+              Sérsmíðaðar lausnir fyrir flutningabíla og sendibíla, byggðar á áratuga reynslu.
+            </p>
+          </div>
 
-              <div className="mt-8 bg-blue-600/10 border-l-4 border-blue-500 rounded-r-xl p-6">
-                <h3 className="font-bold text-white mb-2">Verðupplýsingar</h3>
-                <p className="text-stone-400 text-sm">
-                  Vegna þess að hver vörukassi er sérsmíðaður að þörfum viðskiptavinar
-                  bjóðum við ekki upp á verðlista. Hafðu samband við okkur fyrir nákvæmt
-                  verðmat byggt á þínum óskum.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 stagger-children">
-              {features.map((feature) => (
-                <div key={feature.title} className="bg-stone-800 rounded-2xl p-6 card-hover border border-stone-700/50">
-                  <div className="w-12 h-12 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center mb-4 text-blue-600">
-                    {feature.icon}
-                  </div>
-                  <h3 className="font-bold text-white mb-2">{feature.title}</h3>
-                  <p className="text-stone-400 text-sm">{feature.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {features.map((feature, index) => (
+              <div key={feature.title} className={`rounded-3xl p-8 border border-white/5 flex flex-col justify-between min-h-[180px] ${index === 0 ? 'bg-gradient-to-br from-blue-600/20 to-blue-900/10' : 'bg-stone-800/80'}`}>
+                <span className="text-stone-500 text-sm font-mono">0{index + 1}</span>
+                <div className="mt-auto">
+                  <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-stone-400 text-sm leading-relaxed">{feature.description}</p>
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-stone-800/60 rounded-3xl p-8 md:p-12 border border-white/5">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">Verðupplýsingar</h3>
+                <p className="text-stone-400 max-w-lg">
+                  Hver vörukassi er sérsmíðaður að þörfum viðskiptavinar.
+                  Hafðu samband við okkur fyrir nákvæmt verðmat.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-300 flex-shrink-0"
+              >
+                Fá tilboð
+              </Link>
             </div>
           </div>
         </div>
@@ -118,9 +96,7 @@ export default function VorukassarPage() {
               </div>
             </div>
             <div>
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-5 py-2.5 rounded-full mb-6">
-                <span className="text-blue-700 text-sm font-medium tracking-wide">Sérlausn</span>
-              </div>
+              <span className="inline-block text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">Sérlausn</span>
               <h2 className="text-2xl font-bold text-white mb-4">Wingliner lausn</h2>
               <p className="text-stone-400 mb-6 leading-relaxed">
                 Fyrir hámarks aðgengi og skilvirkni bjóðum við upp á Wingliner lausn,

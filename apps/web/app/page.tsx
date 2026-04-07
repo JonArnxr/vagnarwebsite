@@ -29,7 +29,7 @@ export default async function Home() {
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance">
               Sérsmíðaðar lausnir<br/>
-              <span className="gradient-text">fyrir íslenskar aðstæður</span>
+              fyrir íslenskar aðstæður
             </h1>
             <p className="text-xl text-stone-300 mb-10 leading-relaxed max-w-2xl">
               Kerrur, vörukassar og vörulyftur hannaðar með gæði og endingu í fyrirrúmi.

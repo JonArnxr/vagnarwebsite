@@ -12,7 +12,7 @@ export default function ContactPage() {
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Hafðu samband á<br />
-              <span className="gradient-text">við okkur</span>
+              við okkur
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Við hlökkum til að heyra frá þér. Sendu okkur línu eða hringdu og við svörum eins fljótt og auðið er.
