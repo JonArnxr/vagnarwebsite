@@ -38,12 +38,10 @@ export default function ThjonustaPage() {
               <span className="text-blue-300 text-sm font-medium tracking-wide">Þjónusta</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Fagleg þjónusta<br />
-              og viðhald
+              Við keppumst við að veita framúrskarandi þjónustu
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
-              Við bjóðum upp á heildstæða þjónustu fyrir hestakerrur, vörukassa og vörulyftur.
-              Áratuga reynsla og faglegt starfsfólk tryggir gæðaþjónustu.
+              Alhliða þjónusta og viðgerðir á vörukössum, vörulyftum og kerrum.
             </p>
           </div>
         </div>

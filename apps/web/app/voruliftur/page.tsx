@@ -35,12 +35,10 @@ export default function VorulifturPage() {
               <span className="text-blue-300 text-sm font-medium tracking-wide">Dhollandia dreifingaraðili</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Vörulyftur frá<br />
-              Dhollandia
+              Dhollandia vörulyftur
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
-              Við erum viðurkenndur Dhollandia dreifingaraðili á Íslandi og bjóðum upp á
-              sölu, uppsetningu og þjónustu á öllum tegundum vörulyfta.
+              Vagnar og Þjónusta er viðurkenndur sölu- og þjónustuaðila Dhollandia vörulyfta á Íslandi. Við bjóðum upp á sölu og þjónustu á öllum tegundum vörulyfta.
             </p>
           </div>
         </div>
@@ -58,8 +56,7 @@ export default function VorulifturPage() {
                   og framúrskarandi orðspor fyrir gæði og áreiðanleika.
                 </p>
                 <p>
-                  Vörulyftur Dhollandia eru þekktar fyrir sterka byggingu, einfalt viðhald
-                  og langan endingartíma - eiginleikar sem skipta sköpum á íslenskum markaði.
+                  Vörulyftur Dhollandia eru þekktar fyrir sterka byggingu og langan endingartíma - eiginleikar sem skipta sköpum á íslenskum markaði.
                 </p>
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -163,15 +160,15 @@ export default function VorulifturPage() {
       {/* Services — Three pillars */}
       <section className="py-24 bg-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight mb-16">Þjónusta okkar</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight mb-16">Okkar þjónusta</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-gradient-to-b from-stone-800/80 to-stone-900 rounded-3xl p-10 border border-white/5 min-h-[200px] flex flex-col justify-between group hover:border-blue-500/20 transition-colors">
               <span className="text-6xl font-bold text-white/10 group-hover:text-blue-400/20 transition-colors">01</span>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Sala</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Söluráðgjöf</h3>
                 <p className="text-stone-400 leading-relaxed">
-                  Söluráðgjöf og tilboð á allar tegundir Dhollandia vörulyfta
+                  Söluráðgjöf og tilboð.
                 </p>
               </div>
             </div>
@@ -180,7 +177,7 @@ export default function VorulifturPage() {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-3">Uppsetning</h3>
                 <p className="text-stone-400 leading-relaxed">
-                  Fagleg uppsetning á öllum tegundum vörulyfta á flutningabíla
+                  Uppsetning á öllum tegundum vörulyfta á flutningabíla
                 </p>
               </div>
             </div>
@@ -189,7 +186,7 @@ export default function VorulifturPage() {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-3">Viðhald og viðgerðir</h3>
                 <p className="text-stone-400 leading-relaxed">
-                  Reglulegt viðhald og viðgerðir á öllum tegundum vörulyfta
+                  Við önnumst viðhald og viðgerðir á öllum tegundum vörulyfta
                 </p>
               </div>
             </div>
@@ -202,7 +199,7 @@ export default function VorulifturPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-3xl"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-            Þarftu vörulyftu á bílinn þinn?
+            Vantar þig vörulyftu?
           </h2>
           <p className="text-stone-400 mb-8 max-w-2xl mx-auto">
             Við hjálpum þér að velja réttu lyftuna og sjáum um uppsetningu og þjónustu.

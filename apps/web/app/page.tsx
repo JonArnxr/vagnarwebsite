@@ -57,7 +57,7 @@ export default async function Home() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-24 lg:py-32 bg-stone-900 relative overflow-hidden">
+      <section id="products" className="py-10 lg:py-14 bg-stone-900 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-900 to-slate-900/20"></div>
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-3xl animate-float"></div>
@@ -66,12 +66,8 @@ export default async function Home() {
         <div className="relative z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <span className="inline-block text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">Hvað bjóðum við</span>
-              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">Vöruframboð</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">Vörur og þjónusta</h2>
               <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-6 rounded-full"></div>
-              <p className="text-lg text-stone-400 max-w-2xl mx-auto">
-                Vandaðar lausnir fyrir hestaflutninga og atvinnuflutningabíla
-              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
@@ -80,9 +76,6 @@ export default async function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/60 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-colors duration-500 z-10"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
-                  <div className="mb-3">
-                    <span className="text-blue-400 text-sm font-semibold tracking-wider">01</span>
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-100 transition-colors">Kerrur</h3>
                   <p className="text-stone-400 mb-4 text-sm leading-relaxed">
                     Hannaðar með velferð hestsins og öryggi í forgrunni
@@ -101,9 +94,6 @@ export default async function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-800/60 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-colors duration-500 z-10"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
-                  <div className="mb-3">
-                    <span className="text-blue-400 text-sm font-semibold tracking-wider">02</span>
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-100 transition-colors">Vörukassar</h3>
                   <p className="text-stone-400 mb-4 text-sm leading-relaxed">
                     Sérsmíðaðar lausnir fyrir flutningabíla og sendibíla
@@ -122,9 +112,6 @@ export default async function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-700/60 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-colors duration-500 z-10"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
-                  <div className="mb-3">
-                    <span className="text-blue-400 text-sm font-semibold tracking-wider">03</span>
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-100 transition-colors">Vörulyftur</h3>
                   <p className="text-stone-400 mb-4 text-sm leading-relaxed">
                     Dhollandia vörulyftur - viðurkenndur dreifingaraðili
@@ -143,9 +130,6 @@ export default async function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-600/60 to-transparent z-10"></div>
                 <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/5 transition-colors duration-500 z-10"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-8 z-20">
-                  <div className="mb-3">
-                    <span className="text-blue-400 text-sm font-semibold tracking-wider">04</span>
-                  </div>
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-100 transition-colors">Þjónusta</h3>
                   <p className="text-stone-400 mb-4 text-sm leading-relaxed">
                     Faglegt ráðgjöf og þjónusta allan ársins hring
@@ -168,7 +152,7 @@ export default async function Home() {
 
       {/* News Section */}
       {posts.length > 0 && (
-        <section className="py-24 bg-stone-900 relative overflow-hidden">
+        <section className="py-10 lg:py-14 bg-stone-900 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-stone-900 to-stone-900"></div>
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
@@ -234,18 +218,17 @@ export default async function Home() {
       )}
 
       {/* CTA Section */}
-      <section className="py-24 bg-stone-900 relative overflow-hidden">
+      <section className="py-10 lg:py-14 bg-stone-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-stone-900 via-stone-900 to-stone-950"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-3xl"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Þarftu ráðgjöf eða tilboð?
+                Við viljum heyra í þér
               </h2>
               <p className="text-lg text-stone-400 mb-10 leading-relaxed">
-                Við erum tilbúin að aðstoða þig við að finna réttu lausnina fyrir þínar þarfir.
-                Hafðu samband og við svörum eins fljótt og auðið er.
+                Við erum til þjónustu reiðubúin. Kíktu til okkar í kaffi, sendu okkur línu eða heyrðu í okkur í síma.
               </p>
               <div className="space-y-5">
                 <div className="flex items-center gap-4 group">
@@ -284,7 +267,7 @@ export default async function Home() {
               </div>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-10">
-              <h3 className="text-xl font-bold text-white mb-6">Sendu fyrirspurn</h3>
+              <h3 className="text-xl font-bold text-white mb-6">Senda fyrirspurn</h3>
               <form className="space-y-4">
                 <input
                   type="text"

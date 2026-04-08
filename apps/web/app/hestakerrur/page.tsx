@@ -96,7 +96,7 @@ export default function KerrurPage() {
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Kerrur frá Vögnum & Þjónustu eru hannaðar með velferð hestsins og öryggi í forgrunni,
-              án þess að gera nokkurn afslátt af styrk og endingu.
+              án þess að gera málamiðlanir á styrk eða endingu.
             </p>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function KerrurPage() {
               <span className="text-5xl font-bold text-white">30+</span>
               <div>
                 <h3 className="text-xl font-bold text-white">Ára reynsla</h3>
-                <p className="text-stone-400 mt-2">Áratuga þekking á smíði og viðhaldi kerru á Íslandi</p>
+                <p className="text-stone-400 mt-2">Áratuga þekking á smíði og viðhaldi á kerrum</p>
               </div>
             </div>
 
@@ -163,10 +163,10 @@ export default function KerrurPage() {
       <section className="py-16 bg-stone-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="inline-block text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">Stillingar</span>
-            <h2 className="text-3xl font-bold text-white mb-4">Stilltu þína kerru</h2>
+            <span className="inline-block text-blue-400 text-sm font-semibold tracking-widest uppercase mb-4">Hönnun</span>
+            <h2 className="text-3xl font-bold text-white mb-4">Hannaðu þína hestakerru</h2>
             <p className="text-stone-400 max-w-2xl mx-auto">
-              Veldu stærð, lit og aukabúnað til að fá verðmat. Endanlegt verð getur verið breytilegt.
+              Veldu stærð, lit og aukabúnað sem hentar þínum þörfum.
             </p>
           </div>
 
@@ -325,13 +325,9 @@ export default function KerrurPage() {
       <section className="py-20 bg-stone-900 text-white relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-3xl"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4">
-            Hvort sem um er að ræða daglega notkun eða lengri flutninga
+          <h2 className="text-2xl lg:text-3xl font-bold mb-8">
+            VÞ kerrur eru endingargóðar og standast allar kröfur íslenskra hestamanna
           </h2>
-          <p className="text-stone-400 mb-8 max-w-2xl mx-auto">
-            Kerrur Vagna & Þjónustu bjóða upp á örugga, endingargóða og faglega lausn
-            sem stenst kröfur íslenskra hestamanna.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"

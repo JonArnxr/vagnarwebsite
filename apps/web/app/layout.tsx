@@ -39,12 +39,12 @@ export default function RootLayout({
       >
         <nav className="sticky top-0 z-50 bg-stone-900 border-b border-stone-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
+            <div className="flex justify-between items-center h-24">
               <Link href="/" className="shrink-0 flex items-center group">
                 <img
                   src="/logo.png"
                   alt="Vagnar & Þjónusta"
-                  className="h-14 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)] transition-all duration-300"
+                  className="h-20 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.3)] group-hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.5)] transition-all duration-300"
                 />
               </Link>
               <div className="hidden md:flex items-center gap-1">
