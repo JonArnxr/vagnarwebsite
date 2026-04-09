@@ -34,11 +34,43 @@ const trailerModels = [
 const colors = [
   { id: "white", name: "Hvítur", hex: "#f5f5f4", price: 0 },
   { id: "black", name: "Svartur", hex: "#1c1917", price: 0 },
-  { id: "silver", name: "Silfur", hex: "#a8a29e", price: 50000 },
-  { id: "blue", name: "Blár", hex: "#1e40af", price: 75000 },
-  { id: "red", name: "Rauður", hex: "#b91c1c", price: 75000 },
-  { id: "green", name: "Grænn", hex: "#166534", price: 75000 },
+  { id: "brown", name: "Brúnn", hex: "#78501a", price: 75000 },
 ];
+
+function getTrailerImage(modelId: string, colorId: string, hasExtraWindow: boolean): string | null {
+  const imageMap: Record<string, Record<string, { normal: string; extraWindow: string }>> = {
+    "4-5h": {
+      brown: {
+        normal: "/images/hestakerrur/4-5 hesta brún svartar felgur 1 gluggi.png",
+        extraWindow: "/images/hestakerrur/4-5 hesta brún svartar felgur 2 gluggar.png",
+      },
+      white: {
+        normal: "/images/hestakerrur/4-5 hesta hvít svartar felgur 1 gluggi.png",
+        extraWindow: "/images/hestakerrur/4-5 hesta hvít svartar felgur 1 gluggi.png",
+      },
+    },
+    "6-7h": {
+      brown: {
+        normal: "/images/hestakerrur/6-7 hesta brún svartar felgur 2 gluggar.png",
+        extraWindow: "/images/hestakerrur/6-7 hesta brún svartar felgur 3 gluggar.png",
+      },
+      white: {
+        normal: "/images/hestakerrur/6-7 hesta hvít svartar felgur 2 gluggar.png",
+        extraWindow: "/images/hestakerrur/6-7 hesta hvít svartar felgur 3 gluggar.png",
+      },
+      black: {
+        normal: "/images/hestakerrur/6-7 hesta svört svartar felgur 2 gluggar.png",
+        extraWindow: "/images/hestakerrur/6-7 hesta svört svartar felgur 3 gluggar.png",
+      },
+    },
+  };
+
+  const modelImages = imageMap[modelId];
+  if (!modelImages) return null;
+  const colorImages = modelImages[colorId];
+  if (!colorImages) return null;
+  return hasExtraWindow ? colorImages.extraWindow : colorImages.normal;
+}
 
 const wheelOptions = [
   { id: "aluminum-wheels", name: "Álfelgur í stað stáls", price: 68000 },
@@ -182,38 +214,56 @@ export default function KerrurPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Preview */}
             <div className="lg:col-span-2">
-              <div
-                className="aspect-[16/10] relative flex items-center justify-center transition-colors duration-500 rounded-2xl overflow-hidden"
-                style={{ backgroundColor: selectedColor.hex }}
-              >
-                <div className="text-center p-8">
+              {(() => {
+                const hasExtraWindow = selectedExtras.includes("extra-window");
+                const trailerImage = getTrailerImage(selectedModel.id, selectedColor.id, hasExtraWindow);
+                if (trailerImage) {
+                  return (
+                    <div className="aspect-[16/10] relative rounded-2xl overflow-hidden bg-stone-800">
+                      <Image
+                        src={trailerImage}
+                        alt={`${selectedModel.name} - ${selectedColor.name}`}
+                        fill
+                        className="object-cover transition-opacity duration-500"
+                      />
+                    </div>
+                  );
+                }
+                return (
                   <div
-                    className="text-7xl font-bold mb-4 transition-colors duration-300"
-                    style={{ color: selectedColor.id === 'white' || selectedColor.id === 'silver' ? '#1c1917' : '#f5f5f4' }}
+                    className="aspect-[16/10] relative flex items-center justify-center transition-colors duration-500 rounded-2xl overflow-hidden"
+                    style={{ backgroundColor: selectedColor.hex }}
                   >
-                    {selectedModel.horses}H
+                    <div className="text-center p-8">
+                      <div
+                        className="text-7xl font-bold mb-4 transition-colors duration-300"
+                        style={{ color: selectedColor.id === 'white' ? '#1c1917' : '#f5f5f4' }}
+                      >
+                        {selectedModel.horses}H
+                      </div>
+                      <div
+                        className="text-xl font-medium transition-colors duration-300"
+                        style={{ color: selectedColor.id === 'white' ? '#44403c' : '#d6d3d1' }}
+                      >
+                        {selectedModel.name}
+                      </div>
+                      <div
+                        className="text-sm mt-2 transition-colors duration-300"
+                        style={{ color: selectedColor.id === 'white' ? '#78716c' : '#a8a29e' }}
+                      >
+                        {selectedColor.name}{selectedWheels ? ' • ' + selectedWheels.name : ''}
+                      </div>
+                      <div
+                        className="text-sm mt-4 transition-colors duration-300"
+                        style={{ color: selectedColor.id === 'white' ? '#78716c' : '#a8a29e' }}
+                      >
+                        <div>{selectedModel.specs}</div>
+                        <div>{selectedModel.weight}</div>
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    className="text-xl font-medium transition-colors duration-300"
-                    style={{ color: selectedColor.id === 'white' || selectedColor.id === 'silver' ? '#44403c' : '#d6d3d1' }}
-                  >
-                    {selectedModel.name}
-                  </div>
-                  <div
-                    className="text-sm mt-2 transition-colors duration-300"
-                    style={{ color: selectedColor.id === 'white' || selectedColor.id === 'silver' ? '#78716c' : '#a8a29e' }}
-                  >
-                    {selectedColor.name}{selectedWheels ? ' \u2022 ' + selectedWheels.name : ''}
-                  </div>
-                  <div
-                    className="text-sm mt-4 transition-colors duration-300"
-                    style={{ color: selectedColor.id === 'white' || selectedColor.id === 'silver' ? '#78716c' : '#a8a29e' }}
-                  >
-                    <div>{selectedModel.specs}</div>
-                    <div>{selectedModel.weight}</div>
-                  </div>
-                </div>
-              </div>
+                );
+              })()}
 
               {/* Color Selection */}
               <div className="mt-8">
