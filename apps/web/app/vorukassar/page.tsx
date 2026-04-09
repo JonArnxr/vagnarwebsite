@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const features = [
@@ -23,9 +24,17 @@ export default function VorukassarPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative bg-stone-900 text-white py-24">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#44403c_1px,transparent_1px),linear-gradient(to_bottom,#44403c_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-stone-900 text-white overflow-hidden min-h-[550px] lg:min-h-[700px]">
+        <Image
+          src="/images/vorukassarHero.png"
+          alt="Vörukassi frá Vögnum og Þjónustu"
+          fill
+          priority
+          className="object-cover object-[center_45%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 lg:py-40">
           <div className="max-w-3xl animate-fade-in-up">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 px-5 py-2.5 rounded-full mb-6">
               <span className="text-blue-300 text-sm font-medium tracking-wide">Vörukassar</span>
@@ -88,11 +97,19 @@ export default function VorukassarPage() {
       <section className="py-16 bg-stone-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-stone-900 aspect-video rounded-2xl flex items-center justify-center overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent"></div>
-              <div className="text-center p-8 relative">
-                <span className="gradient-text text-4xl font-bold">WINGLINER</span>
-                <p className="text-stone-400 mt-2">Hámarks aðgengi og skilvirkni</p>
+            <div className="aspect-video rounded-2xl overflow-hidden relative">
+              <Image
+                src="/images/winglinerSmallPhoto.png"
+                alt="Wingliner vörukassi"
+                fill
+                className="object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-black/50"></div>
+              <div className="absolute inset-0 flex items-center justify-center text-center">
+                <div>
+                  <span className="text-white text-4xl font-bold">WINGLINER</span>
+                  <p className="text-stone-300 mt-2">Hámarks aðgengi og skilvirkni</p>
+                </div>
               </div>
             </div>
             <div>

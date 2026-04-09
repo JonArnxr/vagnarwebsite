@@ -11,7 +11,7 @@ export default async function FeedPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative bg-stone-900 text-white py-24">
+      <section className="relative bg-stone-900 text-white py-12">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#44403c_1px,transparent_1px),linear-gradient(to_bottom,#44403c_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl animate-fade-in-up">
@@ -30,7 +30,7 @@ export default async function FeedPage() {
       </section>
 
       {/* Posts Grid */}
-      <section className="py-16 bg-stone-900">
+      <section className="py-8 bg-stone-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
